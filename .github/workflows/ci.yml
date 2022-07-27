@@ -2,12 +2,9 @@ name: Continuous Integration
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
 
 jobs:
-  compile:
+  Compile:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,9 +18,7 @@ jobs:
       - name: Compile Project
         run: sbt compile
 
-  test:
-    needs: compile
-
+  Test:
     runs-on: ubuntu-latest
 
     steps:
