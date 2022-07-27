@@ -8,13 +8,13 @@ import java.text.ParsePosition
 class ExtensionsSpec extends FixtureAnyFlatSpec {
   protected type FixtureParam = ParsePosition
 
-  private val INITIAL_PARSE_POSITION = 2
-  private val INITIAL_ERROR_POSITION = 1
+  private val initialParsePosition = 2
+  private val initialErrorPosition = 1
 
   override def withFixture(test: OneArgTest): Outcome = {
     val fixture: FixtureParam = {
-      val position = new ParsePosition(INITIAL_PARSE_POSITION)
-      position.setErrorIndex(INITIAL_ERROR_POSITION)
+      val position = new ParsePosition(initialParsePosition)
+      position.setErrorIndex(initialErrorPosition)
       position
     }
 
